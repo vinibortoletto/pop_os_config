@@ -61,9 +61,9 @@ echo "### INSTALLING DOCKER ###"
 echo "#########################"
 echo " "
 
-sudo apt-get remove docker* containerd runc
+sudo apt-get remove -y docker* containerd runc
 
-sudo apt-get install \
+sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -76,11 +76,8 @@ echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
   | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-sudo apt-get update
-
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-
-sudo groupadd docker
+sudo apt-get update -y
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 newgrp docker
 sudo systemctl start docker
@@ -88,10 +85,10 @@ sudo systemctl enable docker
 docker run hello-world
 
 echo " "
-echo "#########################"
+echo "##################################"
 echo "### INSTALLING MYSQL WORKBENCH ###"
-echo "#########################"
+echo "##################################"
 echo " "
 
-wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb                        ─╯
-sudo apt install ./mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb                                                            ─╯
+cd ~/Downloads && wget https://dev.mysql.com/get/Downloads/MySQLGUITools/mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb
+sudo apt install -y ./mysql-workbench-community_8.0.31-1ubuntu22.04_amd64.deb
