@@ -25,3 +25,12 @@ echo "#################################"
 echo " "
 
 cp -r Wallpapers ~/Pictures
+
+echo " "
+echo "########################################"
+echo "### ADDING FIRA CODE AND MESLO FONTS ###"
+echo "########################################"
+echo " "
+
+cp fonts/fira_code ~/.local/share/fonts
+cp fonts/meslo_lgs ~/.local/share/fonts
