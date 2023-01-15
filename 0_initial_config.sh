@@ -1,36 +1,35 @@
 echo " "
-echo "######################################"
-echo "### CONFIGURING GIT EMAIL AND NAME ###"
-echo "######################################"
+echo "#####################################"
+echo "### GIT EMAIL AND NAME CONFIGURED ###"
+echo "#####################################"
 echo " "
 
 git config --global user.email "ovinibortoletto@gmail.com"
 git config --global user.name "Vinicius Bortoletto"
 
 echo " "
-echo "###########################"
-echo "### CONFIGURING SSH KEY ###"
-echo "###########################"
-echo " "
-
-ssh-keygen -t ed25519 -C "ovinibortoletto@gmail.com"
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-cat ~/.ssh/id_ed25519.pub
-
-echo " "
-echo "#################################"
-echo "### COPYING WALLPAPERS FOLDER ###"
-echo "#################################"
+echo "##################################################"
+echo "### WALLPAPERS FOLDER COPIED TO PICTURES FOLDER###"
+echo "##################################################"
 echo " "
 
 cp -r Wallpapers ~/Pictures
 
 echo " "
-echo "########################################"
-echo "### ADDING FIRA CODE AND MESLO FONTS ###"
-echo "########################################"
+echo "###########################################"
+echo "### FIRA CODE AND MESLO FONTS INSTALLED ###"
+echo "###########################################"
 echo " "
 
-cp fonts/fira_code ~/.local/share/fonts
-cp fonts/meslo_lgs ~/.local/share/fonts
+cp -r fonts/fira_code ~/.local/share/fonts
+cp -r fonts/meslo_lgs ~/.local/share/fonts
+
+echo " "
+echo "############################"
+echo "### UNINSTALLING FIREFOX ###"
+echo "############################"
+echo " "
+
+sudo apt purge firefox -y
+rm -rf ~/.mozilla
+rm -rf ~/.cache/mozilla

@@ -33,6 +33,14 @@ flatpak install qbittorrent -y
 
 echo " "
 echo "########################"
+echo "### INSTALLING STEAM ###"
+echo "########################"
+echo " "
+
+sudo apt install steam -y
+
+echo " "
+echo "########################"
 echo "### INSTALLING PCSX2 ###"
 echo "########################"
 echo " "
@@ -54,3 +62,12 @@ echo "############################"
 echo " "
 
 flatpak install flameshot -y
+
+echo " "
+echo "####################################"
+echo "### INSTALLING EXTENSION MANAGER ###"
+echo "####################################"
+echo " "
+
+sudo apt install gnome-shell-extension-manager -y
+

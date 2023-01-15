@@ -9,3 +9,4 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
+cp .zshrc ~/
