@@ -33,6 +33,15 @@ flatpak install qbittorrent -y
 
 echo " "
 echo "########################"
+echo "### INSTALLING MPV ###"
+echo "########################"
+echo " "
+
+sudo apt install mpv -y
+cp -r mpv ~/.config 
+
+echo " "
+echo "########################"
 echo "### INSTALLING STEAM ###"
 echo "########################"
 echo " "

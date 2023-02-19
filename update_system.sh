@@ -22,3 +22,5 @@ echo "################################"
 echo ""
 
 sudo apt autoremove -y
+
+sudo cp dark.css /usr/share/gnome-shell/extensions/pop-shell@system76.com/
