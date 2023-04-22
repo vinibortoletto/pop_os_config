@@ -1,5 +1,5 @@
 #!/bin/bash
-source ./.functions.sh
+source ~/Code/pop_os_config/.functions.sh
 
 echo_doing 'Updating apt'
 sudo apt update -y
@@ -14,6 +14,6 @@ echo_doing 'Cleaning dependencies'
 sudo apt autoremove -y
 echo_done
 
-echo_doing 'Updating Gnome CSS'
-sudo cp dark.css /usr/share/gnome-shell/extensions/pop-shell@system76.com/
-echo_done
+# echo_doing 'Updating Gnome CSS'
+# sudo cp ~/Code/pop_os_config/dark.css /usr/share/gnome-shell/extensions/pop-shell@system76.com/
+# echo_done
