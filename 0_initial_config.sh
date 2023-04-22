@@ -1,5 +1,5 @@
+#!/bin/bash
 source ./.functions.sh
-
 
 echo_doing 'Settings Git email and name'
 git config --global user.email "ovinibortoletto@gmail.com"

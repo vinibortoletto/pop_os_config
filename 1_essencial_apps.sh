@@ -1,5 +1,4 @@
 #!/bin/bash
-
 source ./.functions.sh
 
 echo_doing 'Updating system'
