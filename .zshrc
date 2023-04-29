@@ -106,3 +106,22 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Necessário para auto-complete do comando trybe-publisher
+source /etc/bash_completion.d/trybe-publisher
+
+# Git shortcut
+function lazygit() {
+    git add .
+    git commit -a -m "$1"
+    git push
+}
+
+# Update shortcut
+function up() {
+    bash ~/Code/pop_os_config/update_system.sh
+}

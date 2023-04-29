@@ -6,6 +6,14 @@ sudo apt update -y
 sudo apt upgrade -y
 echo_done
 
+echo_doing 'Installing Nala'
+sudo apt install nala -y
+echo_done
+
+echo_doing 'Installing Blueman'
+sudo apt install blueman -y
+echo_done
+
 echo_doing 'Installing VSCode'
 sudo apt install code -y
 echo_done
