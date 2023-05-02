@@ -50,3 +50,7 @@ echo_done
 echo_doing 'Installing Gnome Extension Manager'
 sudo apt install gnome-shell-extension-manager -y
 echo_done
+
+echo_doing 'Installing Python Env'
+sudo nala install python python3.10-venv -y
+echo_done
