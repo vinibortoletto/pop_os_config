@@ -18,8 +18,8 @@ echo_doing 'Installing VSCode'
 sudo apt install code -y
 echo_done
 
-echo_doing 'Installing Zoom'
-flatpak install zoom -y
+echo_doing 'Installing Discord'
+sudo nala install discord -y
 echo_done
 
 echo_doing 'Installing qBittorrent'
@@ -43,14 +43,10 @@ echo_doing 'installing Duckstation'
 flatpak install duckstation -y
 echo_done
 
-echo_doing 'Installing Flameshot'
-flatpak install flameshot -y
-echo_done
-
 echo_doing 'Installing Gnome Extension Manager'
 sudo apt install gnome-shell-extension-manager -y
 echo_done
 
 echo_doing 'Installing Python Env'
-sudo nala install python python3.10-venv -y
+sudo nala install python3 python3.10-venv -y
 echo_done
