@@ -22,3 +22,13 @@ env_reset,pwfeedback
 ```
 
 
+## Fix audio 
+```
+sudo apt reinstall pipewire pipewire-pulse
+```
+```
+systemctl --user --now enable pipewire pipewire-pulse
+```
+```
+reboot
+```
