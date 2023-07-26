@@ -2,8 +2,7 @@
 source ~/Code/pop_os_config/.functions.sh
 
 echo_doing 'Updating apt'
-sudo apt update -y
-sudo apt upgrade -y
+sudo nala upgrade -y
 echo_done
 
 echo_doing 'Updating flatpak'
@@ -11,7 +10,9 @@ flatpak upgrade -y
 echo_done
 
 echo_doing 'Cleaning dependencies'
-sudo apt autoremove -y
+sudo nala autoremove -y
+sudo nala autopurge -y
+sudo nala clean
 echo_done
 
 # echo_doing 'Updating Gnome CSS'
