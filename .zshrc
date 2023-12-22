@@ -112,7 +112,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Necessário para auto-complete do comando trybe-publisher
-source /etc/bash_completion.d/trybe-publisher
+#source /etc/bash_completion.d/trybe-publisher
 
 # Git shortcut
 function lazygit() {
