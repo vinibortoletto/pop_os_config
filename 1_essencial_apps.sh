@@ -58,3 +58,7 @@ echo_done
 echo_doing 'Installing Python Env'
 sudo nala install python3 python3.10-venv python3-pip -y
 echo_done
+
+echo_doing 'Installing IntelliJ Community'
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
+echo_done
