@@ -32,3 +32,9 @@ systemctl --user --now enable pipewire pipewire-pulse
 ```
 reboot
 ```
+
+##
+Add ZSH to Intellij terminal (flatpak version):
+```
+flatpak-spawn --host --env=TERM=xterm-256color zsh
+```

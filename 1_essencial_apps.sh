@@ -62,3 +62,9 @@ echo_done
 echo_doing 'Installing IntelliJ Community'
 flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community -y
 echo_done
+
+echo_doing 'Installing Azul Zulu JDK'
+wget https://cdn.azul.com/zulu/bin/zulu21.30.15-ca-jdk21.0.1-linux_amd64.deb
+sudo apt install -y ./zulu21.30.15-ca-jdk21.0.1-linux_amd64.deb
+rm zulu21.30.15-ca-jdk21.0.1-linux_amd64.deb
+echo_done
