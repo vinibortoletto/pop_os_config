@@ -10,12 +10,16 @@ echo_doing 'Installing Nala'
 sudo apt install nala -y
 echo_done
 
-echo_doing 'Installing Brave Browser'
-sudo nala install curl
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo nala  update
-sudo nala install brave-browser
+# echo_doing 'Installing Google Chrome'
+# flatpak install com.google.Chrome -y
+# echo_done
+
+# echo_doing 'Installing Brave Browser'
+# sudo nala install curl
+# sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+# echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+# sudo nala update
+# sudo nala install brave-browser -y
 
 echo_doing 'Installing Blueman'
 sudo nala install blueman -y
@@ -38,18 +42,18 @@ sudo nala install mpv -y
 cp -r mpv ~/.config 
 echo_done
 
-echo_doing 'Installing Steam'
-sudo flatpak install com.valvesoftware.Steam -y
-sudo nala install steam-devices -y
-echo_done
+#echo_doing 'Installing Steam'
+#sudo flatpak install com.valvesoftware.Steam -y
+#sudo nala install steam-devices -y
+#echo_done
 
-echo_doing 'Installing PCSX2'
-flatpak install pcsx2 -y
-echo_done
+#echo_doing 'Installing PCSX2'
+#flatpak install pcsx2 -y
+#echo_done
 
-echo_doing 'installing Duckstation'
-flatpak install duckstation -y
-echo_done
+#echo_doing 'installing Duckstation'
+#flatpak install duckstation -y
+#echo_done
 
 echo_doing 'Installing Gnome Extension Manager'
 sudo nala install gnome-shell-extension-manager -y
