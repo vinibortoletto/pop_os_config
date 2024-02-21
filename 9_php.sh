@@ -18,3 +18,26 @@ php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/local/bin/composer
 
 echo_done
+
+echo_doing 'Installing XAMPP'
+
+curl -O https://sinalbr.dl.sourceforge.net/project/xampp/XAMPP%20Linux/8.2.12/xampp-linux-x64-8.2.12-0-installer.run
+chmod +x script.sh xampp-linux-x64-8.2.12-0-installer.run
+sudo ./xampp-linux-x64-8.2.12-0-installer.run
+
+echo '[Desktop Entry]
+Comment=Start or Stop XAMPP
+Name=XAMPP Control Panel
+Exec=sh -c "pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY sudo /opt/lampp/manager-linux-x64.run"
+Encoding=UTF-8
+Terminal=false
+Name[en_US]=XAMPP Control Panel
+Comment[en_US]=Start or Stop XAMPP GUI
+Type=Application
+Icon=xampp' > ~/.local/share/applications/xampp.desktop
+
+chmod +x ~/.local/share/applications/xampp.desktop
+update-desktop-database ~/.local/share/applications/
+rm xampp-linux-x64-8.2.12-0-installer.run
+
+echo_done
