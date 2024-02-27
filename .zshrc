@@ -70,11 +70,15 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
+export NVM_LAZY_LOAD=true
+
 plugins=(
 git
 zsh-syntax-highlighting
 fzf
 zsh-autosuggestions
+zsh-nvm
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -107,9 +111,9 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Necessário para auto-complete do comando trybe-publisher
 #source /etc/bash_completion.d/trybe-publisher
@@ -125,3 +129,17 @@ function lazygit() {
 function up() {
     bash ~/Code/pop_os_config/update_system.sh
 }
+
+
+# # Load Angular CLI autocompletion.
+# source <(ng completion script)
+
+# export PATH=$PATH:/usr/bin/docker
+
+
+# # bun completions
+# [ -s "/home/vini/.bun/_bun" ] && source "/home/vini/.bun/_bun"
+
+# # bun
+# export BUN_INSTALL="$HOME/.bun"
+# export PATH="$BUN_INSTALL/bin:$PATH"
