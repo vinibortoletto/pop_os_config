@@ -30,7 +30,7 @@ sudo nala install code -y
 echo_done
 
 echo_doing 'Installing Discord'
-sudo nala install discord -y
+flatpak install -y com.discordapp.Discord
 echo_done
 
 echo_doing 'Installing qBittorrent'
