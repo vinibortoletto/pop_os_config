@@ -1,6 +1,7 @@
 #!/bin/bash
 source ./.functions.sh
 
+
 echo_doing 'Updating system'
 sudo apt update -y
 sudo apt upgrade -y
