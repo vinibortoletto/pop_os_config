@@ -135,3 +135,11 @@ function idea() {
     nohup flatpak run --file-forwarding com.jetbrains.IntelliJ-IDEA-Community "$@" &
     disown
 }
+
+function dcup() {
+	docker-compose up -d
+}
+
+function dcdown() {
+	docker-compose down
+}
