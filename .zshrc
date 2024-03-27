@@ -121,8 +121,7 @@ function lazygit() {
     git push
 }
 
-# Update shortcut
-function up() {
+function update() {
     bash ~/Code/pop_os_config/update_system.sh
 }
 
@@ -134,4 +133,16 @@ function phps() {
 function idea() {
     nohup flatpak run --file-forwarding com.jetbrains.IntelliJ-IDEA-Community "$@" &
     disown
+}
+
+function dc() {
+    if [[ $1 == "up" ]]; then
+        docker-compose up -d
+    elif [[ $1 == "down" ]]; then
+        docker-compose down
+    elif [[ $1 == "clean" ]]; then
+        docker system prune -a
+    else
+        echo "Invalid command. Usage: dc up"
+    fi
 }
