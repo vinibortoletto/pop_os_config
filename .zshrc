@@ -111,10 +111,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-########################
-### CUSTOM FUNCTIONS ###
-########################
+# Necessário para auto-complete do comando trybe-publisher
+#source /etc/bash_completion.d/trybe-publisher
 
+# Git shortcut
 function lazygit() {
     git add .
     git commit -a -m "$1"
@@ -142,6 +142,8 @@ function dc() {
         docker-compose down
     elif [[ $1 == "clean" ]]; then
         docker system prune -a
+    elif [[ $1 == "down-all" ]]; then
+        docker stop $(docker ps -a -q)
     else
         echo "Invalid command. Usage: dc up"
     fi
