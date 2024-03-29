@@ -22,5 +22,9 @@ rm -rf ~/.cache/mozilla
 echo_done
 
 echo_doing 'Fixing Screen tearing'
-sudo cp xorg.conf /etc/X11/xorg.conf
+sudo cp ./nvidia-settings/xorg.conf /etc/X11/xorg.conf
+echo_done
+
+echo_doing 'Settings PopOs CSS'
+sudo cp ./system-theme/dark.css /usr/share/gnome-shell/extensions/pop-shell@system76.com
 echo_done
