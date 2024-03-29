@@ -20,3 +20,7 @@ sudo apt purge firefox -y
 rm -rf ~/.mozilla
 rm -rf ~/.cache/mozilla
 echo_done
+
+echo_doing 'Fixing Screen tearing'
+sudo cp xorg.conf /etc/X11/xorg.conf
+echo_done
