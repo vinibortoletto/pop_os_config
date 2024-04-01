@@ -38,3 +38,8 @@ Add ZSH to Intellij terminal (flatpak version):
 ```
 flatpak-spawn --host --env=TERM=xterm-256color zsh
 ```
+
+## Make Alt key act as Super and vice verse
+- Install Gnome Tweaks
+- In Keyboard & Mouse, go to Additional Layout Options
+- Select: Alt and Win Behavior > Left Alt is swapped with left Win
