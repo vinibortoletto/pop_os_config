@@ -28,3 +28,16 @@ echo_done
 echo_doing 'Settings PopOs CSS'
 sudo cp ./system-theme/dark.css /usr/share/gnome-shell/extensions/pop-shell@system76.com
 echo_done
+
+echo_doing 'Add IntelliJ PT-BR dictionary'
+
+wget https://github.com/rafaelsc/IntelliJ.Portuguese.Brazil.Dictionary/archive/refs/heads/master.zip
+unzip master.zip
+mkdir -p ~/.local/share/dictionaries/
+
+cp portuguese-brazil.dic ~/.local/share/dictionaries/
+cp portuguese-brazil_technical-terms.dic ~/.local/share/dictionaries/
+cp portuguese-brazil_technical-terms_without-accents.dic ~/.local/share/dictionaries/
+cp portuguese-brazil_without-accents.dic ~/.local/share/dictionaries/
+
+echo_done
