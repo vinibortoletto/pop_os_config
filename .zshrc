@@ -144,7 +144,53 @@ function dc() {
         docker system prune -a
     elif [[ $1 == "down-all" ]]; then
         docker stop $(docker ps -a -q)
+   elif [[ $1 == "reload" ]]; then
+        docker-compose down && docker-compose up -d
     else
         echo "Invalid command. Usage: dc up"
     fi
 }
+
+function checkport() {
+    sudo netstat -tunpl | grep $1
+}
+
+function locate() {
+    local filename=""
+    local directory=""
+
+    while getopts ":f:d:" opt; do
+        case ${opt} in
+            f)
+                filename="$OPTARG"
+                ;;
+            d)
+                directory="$OPTARG"
+                ;;
+            \?)
+                echo "Invalid option: -$OPTARG" >&2
+                return 1
+                ;;
+            :)
+                echo "Option -$OPTARG requires an argument." >&2
+                return 1
+                ;;
+        esac
+    done
+
+    if [[ -n "$filename" ]]; then
+        find ~ -type f -name "*$filename*"
+    elif [[ -n "$directory" ]]; then
+        find ~ -type d -name "*$directory*"
+    else
+        echo "Please specify either -f for filename or -d for directory."
+        return 1
+    fi
+}
+
+
+
+# Set Java home
+export JAVA_HOME=/usr/lib/jvm/zulu-17-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+
