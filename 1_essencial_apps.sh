@@ -94,5 +94,6 @@ openssl req -subj '/C=US/CN=Postman Proxy' -new -newkey rsa:2048 -sha256 -days 3
 echo_done
 
 echo_doing 'Configuring PHP'
-sudo nala install -y php php-curl composer
+sudo add-apt-repository ppa:ondrej/php
+sudo nala install -y php8.3 php8.3-curl composer
 echo_done
