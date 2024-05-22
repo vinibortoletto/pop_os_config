@@ -97,3 +97,7 @@ echo_doing 'Configuring PHP'
 sudo add-apt-repository ppa:ondrej/php
 sudo nala install -y php8.3 php8.3-curl composer
 echo_done
+
+echo_doing 'Installing Dev Toolbox'
+flatpak install flathub me.iepure.devtoolbox
+echo_done
