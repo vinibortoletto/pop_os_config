@@ -16,5 +16,5 @@ sudo nala clean
 echo_done
 
 echo_doing 'Settings PopOs CSS'
-sudo cp ./system-theme/dark.css /usr/share/gnome-shell/extensions/pop-shell@system76.com
+sudo cp system-theme/dark.css /usr/share/gnome-shell/extensions/pop-shell@system76.com
 echo_done
